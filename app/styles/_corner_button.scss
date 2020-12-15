@@ -1,0 +1,25 @@
+@import "./mixins";
+@import "./variables";
+
+
+
+#btn{
+	outline: none;
+	border: 2px solid rgb(234, 241, 241);
+	font-family: 'Candal', sans-serif;
+	background-color: transparent;
+	color: rgb(234, 241, 241);
+	border-radius: 25px;
+	width: 350px;
+	height: 50px;
+	font-size: 20px;
+	// opacity: 1;
+	// transform: translateY(50px);
+	// transform: rotateZ(0deg);
+	// transition: all 2s ease-in;
+	// transition-delay: 2s;
+	&:hover{
+		cursor: pointer;
+		
+	}
+}

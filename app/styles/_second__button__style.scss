@@ -1,0 +1,48 @@
+@import "./mixins";
+@import "./variables";
+
+
+// second idea, images that come forward as we click on them, also fixed position
+// ********************
+// image container nr 2 button
+.img-front{
+    position: fixed;
+    @include repeatAutoMinMax;
+    top: 10vh;
+    width: 95%;
+    height: 90%;
+    padding: 20px;
+    pointer-events: all;
+    background-color: rgba(0,0,0,0.85);
+    transform: translateX(-110%);
+    transition: all 300ms ease-in;
+}
+// upper right button click added class
+.img-front-slide-in{
+    transform: translateX(0%);
+}
+// each image has its own div
+.img-box{
+    // position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 4px 7px 12px white;
+    // overflow: hidden;
+    transition: all 5s ease;
+    
+}
+// image class 
+ .moving{
+     transform: translateX(30px);
+ }
+
+.img-box-picture {
+    background-size: cover;
+    // transition: scale 300ms ease-in-out;
+    // transition: scale 1s ease-in-out;
+    // &:hover{
+    //     transform: scale(1.05);
+    // }
+}
+
+

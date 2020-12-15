@@ -1,0 +1,21 @@
+@import "./mixins";
+@import "./variables";
+@import "./close_btn_x";
+
+main{
+    position: relative;
+    grid-column: 1/13;
+    height: 80vh;
+    // border: 1px dotted red;
+    @include centered;
+}
+
+
+
+
+
+
+
+
+
+ 

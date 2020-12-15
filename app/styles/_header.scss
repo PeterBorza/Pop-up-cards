@@ -1,0 +1,57 @@
+@import "./mixins";
+@import "./variables";
+@import "./first__button__style";
+@import "./second__button__style";
+@import "./corner_button";
+
+header {
+	position: relative;
+	grid-column: 1/13;
+	height: 10vh;
+}
+
+/* text,click targets */
+nav {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 23px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	// padding-top: 20px;
+	// background-color: rgb(4, 70, 42);
+	// display: none;
+	// background-color: #63d471;
+	// background-image: linear-gradient(to right, #2d8d38 0%, #15241b 74%);
+}
+.nav-links{
+	@include flexWrap;
+	p{
+		position: relative;
+		padding: 55px;
+		word-wrap: break-word;
+		// color: rgb(234, 241, 241);
+		color: rgb(4, 43, 6);
+		text-shadow: 8px 11px 30px rgb(22, 21, 21);
+		&::after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: white;
+			left: 0;
+			bottom: 0;
+			
+			transform: $tfs0;
+			transition: scale 300ms ease-in-out;
+		}
+		&:hover {
+			cursor: pointer;
+			transform: $tfs1;
+		}
+	}
+}
+
+

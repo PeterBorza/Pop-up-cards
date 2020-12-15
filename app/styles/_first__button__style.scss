@@ -1,0 +1,68 @@
+@import "./mixins";
+@import "./variables";
+
+
+.container{
+    position: relative;
+    @include centered;
+    width: 100%;
+    height: 70vh;
+    // border: $black;
+}
+// the card-box is fixed, behind the page, it contains either a cardor a photo
+// *****************
+.card-box{
+    position: fixed;
+    // @include centered;
+    @include spaceAround(column);
+    width: 70%;
+    height: 85%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(0,0) rotateZ(-5deg);
+    transition: all 300ms ease;
+    p{
+        font-size: 30px;
+        color: white;
+    }
+}
+.card-box.open{
+    transform: scale(1,1) rotateZ(0deg);
+    transform-origin: left;
+}
+
+// css on card CARD 
+// *****************
+
+// .card{
+//     position: absolute;
+//     @include absoluteCenter;
+//     border: $blue;
+//     width: 60%;
+//     height: 60vh;
+//     // @include centered;
+// }
+// .card p,
+// .card-box p{
+//     position: absolute;
+//     @include absoluteCenter();
+//     color: rgb(5, 39, 8);
+//     font-size: 30px;
+//     font-weight: bold;
+//     text-align: center;
+// }
+
+// css on image pop up
+.image{
+    width: 70%;
+    height: 70%;
+}
+// text in the middle of the screen
+.cont-text{
+    // position: absolute;
+    // left: 10px;
+    // top: 0;
+    color: rgb(4, 43, 6);
+    font-size: 70px;
+    text-shadow: 3px 6px 25px rgb(83, 77, 77);
+    
+}

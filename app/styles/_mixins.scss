@@ -1,0 +1,38 @@
+
+
+@mixin centered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin spaceAround($direction) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin twelveColumnsGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    // children displayed with grid-column ex. 1/7, 2/5 etc.
+}
+
+@mixin absoluteCenter {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+@mixin flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; //child is flex: 1 1 <baseWidth>   or 0 1 <baseWidth> stand for flexgrow, flexshrink, and flex-basis
+}
+@mixin repeatAutoMinMax {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    // grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    // with auto-fill baseline does not increase !
+}
