@@ -4,8 +4,9 @@
 
 
 // closing button of img-front
-#img-front-close{
+.x-close-button{
     position: absolute;
+    display: block;
     right: 0px;
     top: 0px;
     width: 30px;
@@ -17,4 +18,5 @@
     color: white;
     font-weight: bolder;
     font-size: 80%;
+    cursor: pointer;
 }

@@ -3,17 +3,15 @@
 
 
 footer{
-    position: relative;
     display: flex;
     justify-content: end;
     height: 10vh;
     grid-column: 1/13;
     z-index: -1;
-    text-shadow: 3px 6px 10px rgb(22, 22, 22);
 }
 
 footer p{
     padding: 10px 25px;
-    // color: rgb(234, 241, 241);
-    color: rgb(4, 43, 6);
+    color: var(--primary-color);
+    text-shadow: 3px 6px 10px rgb(22, 22, 22);
 }

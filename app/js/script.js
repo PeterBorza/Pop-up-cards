@@ -11,52 +11,7 @@ $(document).ready(function () {
 	const cardContainer = $(".card-box");
 	const container = $(".container");
 
-	// when page finished loading. SETTIMEOUT needed here!
-    $("header, footer").addClass("load");
-    
-    const tl = gsap.timeline({ defaults: { duration: 1 } });
-
-    tl.from("header", { y: -100, opacity: 0 })
-      .from("footer", { x: 100, opacity: 0 })
-
-	// changing paragraph content as we create elements
-	// upperRightText.text("Click on the buttons.");
-
-	// container title shown middleof screen
-	// **************
-
-	container.prepend("<h2></h2>");
-	const contText = $(".container h2");
-	contText.addClass("cont-text");
-	contText.text("Image toggler");
-
-	// Toggle Image or first button
-	// ****************
-    // first we create an img and a p tag, append it to our card-box, then clickfunction
-    
-	cardContainer.prepend("<img> <p></p>");
-	const pic = $(".card-box img");
-	pic.attr("src", "/Documentation/ls11.jpg");
-	pic.addClass("image");
-	const text = $(".card-box p");
-	text.attr("alt", "This picture has birds in it.");
-	text.text("This picture has birds in it.");
-	firstBtn.click(function () {
-		cardContainer.toggleClass("open");
-		upperRightText.text("");
-	});
-
-	// secondBtn element button
-	// ****************
-
-	// secondBtn.click(function () {
-	// 	$(".card-box p").text("");
-	// 	cardContainer.append("<div></div>");
-	// 	$(".card-box div").addClass("card");
-	// 	$(".card").append("<p></p>");
-	// 	$(".card p").text("This is the card.Image will show here");
-	// 	upperRightText.text("Image should appear.");
-	// });
+	
 
 	// thirdBtn element button
 	// **************
@@ -66,14 +21,6 @@ $(document).ready(function () {
 		card.remove();
 		upperRightText.text("");
 	}),
-		// text hovering
-		// *************
-	// 	upperRightText.mouseover(function () {
-	// 		$(this).html("<p>Not clickable.Yet.</p>");
-	// 	});
-	// upperRightText.mouseout(function () {
-	// 	$(this).html("<p>First, create a parent.</p>");
-    // });
     
     upperRightText.hover(function() {
 		$(this).html("<p>Not clickable.Yet.</p>");
@@ -108,17 +55,5 @@ $(document).ready(function () {
 	}
 	$(".img-front div").addClass("img-box");
 
-	// img-front close button upper right corner of popup
-	// **************************************************
-	$("#img-front-close").click(function () {
-		$(".img-front").removeClass("img-front-slide-in");
-	});
-
-	// animation of images inside the .img-front div
-	// $(".img-box").mouseover(function(){
-	//     $(this).html('<p>pic info</p>');
-	// });
-	// $(".img-box").mouseout(function(){
-	//     $(this).html("");
-	// });
+	
 });
